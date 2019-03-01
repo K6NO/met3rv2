@@ -1,26 +1,40 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Navigation from './components/Navigation/Navigation';
+import JumbotronComponent from './components/JumbotronComponent/JumbotronComponent';
+import PartnersComponent from './components/PartnersComponent/PartnersComponent';
+import ZenGridComponent from './components/ZenGridComponent/ZenGridComponent';
+import ZenFleetComponent from './components/ZenFleetComponent/ZenFleetComponent';
+import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
+import SVGBackground from './components/SVGBackground/SVGBackground';
+
 import './App.css';
 
 class App extends Component {
+  
   render() {
+    const props = this.props;
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+        <div className="App">
+        <SVGBackground />
+          <header className="container-fluid">
+          <Navigation />
+          </header>
+          <section className="container">
+              <JumbotronComponent {...props} />
+              <PartnersComponent {...props} />
+              <ZenGridComponent {...props} />
+              <ZenFleetComponent {...props} />
+          </section>
+
+          <section className="container-fluid">
+            <Contact />
+          </section>
+          <footer className="container">
+            <Footer />
+          </footer>
+        </div>
+
     );
   }
 }
