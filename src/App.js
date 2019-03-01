@@ -6,7 +6,7 @@ import ZenGridComponent from './components/ZenGridComponent/ZenGridComponent';
 import ZenFleetComponent from './components/ZenFleetComponent/ZenFleetComponent';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
-import SVGBackground from './components/SVGBackground/SVGBackground';
+import LandingBackground from './components/LandingBackground/LandingBackground';
 
 import './App.css';
 
@@ -16,7 +16,7 @@ class App extends Component {
     const props = this.props;
     return (
         <div className="App">
-        <SVGBackground />
+        <LandingBackground />
           <header className="container-fluid">
           <Navigation />
           </header>
