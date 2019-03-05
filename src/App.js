@@ -17,7 +17,7 @@ class App extends Component {
     return (
         <div className="App">
         <LandingBackground />
-          <header className="container-fluid">
+          <header className="container">
           <Navigation />
           </header>
           <section className="container">

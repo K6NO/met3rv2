@@ -4,11 +4,16 @@ import {
   CarouselItem
 } from 'reactstrap';
 
-
+let imageCounter = 0;
+let storedUrl = 0;
+let storedAlt= 0;
 class CarouselComponent extends Component {
   constructor(props) {
     super(props);
-    this.state = { activeIndex: 0 };
+    this.state = { 
+      activeIndex: 0,
+      
+    };
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
     this.goToIndex = this.goToIndex.bind(this);
@@ -49,15 +54,26 @@ class CarouselComponent extends Component {
 
 
     const slides = items.map((item) => {
+      if(imageCounter === 0) {
+          imageCounter = 0;
+          storedUrl = item.src;
+          storedAlt = item.alt;
+          return null;
+      }
+      
+      imageCounter = 0;
+      storedAlt = '';
+      storedUrl = '';
       return (
-        <CarouselItem
-          onExiting={this.onExiting}
-          onExited={this.onExited}
-          key={item.altText}
-        >
-          <img src={item.src} alt={item.altText} />
-        </CarouselItem>
-      );
+          <CarouselItem
+            onExiting={this.onExiting}
+            onExited={this.onExited}
+            key={item.altText}
+          >
+            <img src={storedUrl} alt={storedAlt} />
+            <img src={item.src} alt={item.altText} />
+          </CarouselItem>
+        );
     });
 
     return (

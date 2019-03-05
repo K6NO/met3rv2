@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Colors } from '../../modules/colors';
 
 /**
  * How we generate the background?
@@ -34,7 +35,7 @@ const StyledIsoBackground = styled.div`
     width: 200%;
     height: 150%;
     position: absolute;
-    background: #fc5e5e;
+    background: ${Colors.midblue};
     top: ${window.innerWidth > window.innerHeight 
     ? "-62%" : "-60%"};
     left: ${window.innerWidth > window.innerHeight 

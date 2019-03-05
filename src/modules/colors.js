@@ -1,0 +1,15 @@
+export const Colors = {
+    lightBlue : '#005FE8',
+    midblue: '#2D38C3',
+    purple: '#452A8D',
+    darkblue: '#2F3268',
+    red: '#F23931',
+    pink: '#A265E9',
+    text: '#2C2C2C',
+    lightText: '#989898',
+    gradientText: 'linear-gradient(to right, #2F3268, #005FE8)',
+    gradientTextWebkit: '-webkit-linear-gradient(left #2F3268, #005FE8)',
+    gradientTextMoz: '-moz-linear-gradient(left, #2F3268, #005FE8)',
+    gradientTextMs: '-ms-linear-gradient(left, #2F3268, #005FE8)',
+    gradientTextO: '-o-linear-gradient(left, #2F3268, #005FE8)',
+}

@@ -27,11 +27,11 @@ class JumbotronComponent extends Component {
             <Row>
                 <Col xs={12} sm={6}>
                     <h4>{partnerText}</h4>
-                    {/* <CarouselComponent items={partnerBox}/> */}
+                    <CarouselComponent items={partnerBox}/>
                 </Col>
                 <Col xs={12} sm={6}>
                     <h4>{supporterText}</h4>
-                    {/* <CarouselComponent items={supporterBox}/> */}
+                    <CarouselComponent items={supporterBox}/>
                 </Col>
             </Row>
         </Col>
