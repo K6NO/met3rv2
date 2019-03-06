@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'reactstrap';
-import { StyledHeader2 } from '../StyledComponents/StyledComponents';
+import styled from 'styled-components';
+import { StyledHeader2, StyledButton1, StyledInput } from '../StyledComponents/StyledComponents';
 
 const h2 = 'Get in touch to know more or request a demo';
 const email = 'info@met3r.com';
 const signup = 'Sign up to our newsletter';
+
+const SubscribeButton = styled(StyledButton1)`
+    width: 30%;
+    padding: 0.375rem 0.75rem;
+    
+`;
+
 
 class Contact extends Component {
   
@@ -15,14 +23,17 @@ class Contact extends Component {
     render() {
         return (
             <Row className="Contact">
-                <div className="imageRightHolder"></div>
-                <Col xs={12} sm={{size: 6}}>
-                    <StyledHeader2>{h2}</StyledHeader2>
-                    <p>{email}</p>
-                    <form className="subscription-form" method="POST" action="php/subscribe.php">
-                        <input type="email" name="email" className="form-control" id="subscribe-input" placeholder={signup} />
-                        <button type="submit" onClick={this.submitHandler}>Subscribe</button>
-                    </form>      
+                <Col>
+                    <div className="container py-5">
+                        <Col xs={12} sm={{size: 6}} className="py-5">
+                            <StyledHeader2>{h2}</StyledHeader2>
+                            <p>{email}</p>
+                            <form className="subscription-form" method="POST" action="php/subscribe.php">
+                                <StyledInput type="email" name="email" id="subscribe-input" placeholder={signup} />
+                                <SubscribeButton type="submit" onClick={this.submitHandler}>Subscribe</SubscribeButton>
+                            </form>      
+                        </Col>
+                    </div>
                 </Col>
             </Row>
         );

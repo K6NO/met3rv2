@@ -18,6 +18,15 @@ export const StyledContainer = styled.section`
     }
 `;
 
+export const StyledFluidContainer = styled.section`
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background: ${Colors.lightText};
+`;
+
 export const StyledHeader1 = styled.h1`
     font-size: 3rem;
     color: #ffffff;
@@ -104,8 +113,9 @@ export const StyledButton1 = styled.button`
     }
     &:hover, &:active, &:focus, &:focus:active, &:active:hover {
         background: ${Colors.gradientText};
+        opacity: .9;
         box-shadow: 0 0 1px 1px #cccccc;
-        border: 1px solid #ff5458;
+        border: 1px solid ${Colors.darkblue};
     }
 `;
 
@@ -127,4 +137,18 @@ export const StyledButton2 = styled(StyledButton1)`
         color: #ffffff;
         border: 1px solid #ffffff;
     }
+`;
+
+export const StyledInput = styled.input`
+    width: 70%!important;
+    display: inline-block!important;
+    padding: 0.375rem 0.75rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: ${Colors.lightText};
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
 `;

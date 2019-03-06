@@ -6,7 +6,7 @@ export const Colors = {
     red: '#F23931',
     pink: '#A265E9',
     text: '#2C2C2C',
-    lightText: '#dedede',
+    lightText: '#DEDEDE',
     gradientText: 'linear-gradient(to right, #2F3268, #005FE8)',
     gradientTextWebkit: '-webkit-linear-gradient(left #2F3268, #005FE8)',
     gradientTextMoz: '-moz-linear-gradient(left, #2F3268, #005FE8)',

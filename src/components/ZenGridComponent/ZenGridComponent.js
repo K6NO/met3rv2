@@ -7,11 +7,11 @@ import BlueLineSVG from '../../images/blue-line.svg';
 
 const StyledMainRow = styled(Row)`
   height: ${`${window.innerHeight * .8}px`};
-  height: 600px;
+  height: ${window.innerWidth < 1024 ? '500px' : '600px'};
 `;
 const StyledImage1 = styled.div`
-    width: 30rem;
-    height: 35rem;
+    width: ${window.innerWidth < 1024 ? '18rem' : '30rem'};
+    height: ${window.innerWidth < 1024 ? '25rem' : '35rem'};
     background-image: url('https://via.placeholder.com/200x200');
     background-size: contain;
     background-position: center;

@@ -38,9 +38,9 @@ class JumbotronComponent extends Component {
                 <StyledButton2 className="mt-4">Learn More</StyledButton2>
               </Col>
               <Col xs={12} lg={4}>
-              {window.innerWidth > 768 
+              {window.innerWidth < 1024  
                 ? '' 
-                : <JumboImage1 className="imageRight1Holder"></JumboImage1>
+                : <JumboImage1 className="JumboImage1"></JumboImage1>
                 }
                 
               </Col>
