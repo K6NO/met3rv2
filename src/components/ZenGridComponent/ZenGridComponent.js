@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { Row, Col } from 'reactstrap';
 import styled from 'styled-components';
 import { device } from '../../modules/devices';
+import { Texts } from '../../modules/texts';
 import { StyledHeader2, StyledLink1 } from '../StyledComponents/StyledComponents';
 import BlueLineSVG from '../../images/blue-line.svg';
 
 const StyledMainRow = styled(Row)`
-  height: ${`${window.innerHeight * .8}px`};
-  height: ${window.innerWidth < 1024 ? '500px' : '600px'};
+  min-height: ${window.innerWidth < 1024 ? '500px' : '600px'};
 `;
 const StyledImage1 = styled.div`
     width: ${window.innerWidth < 1024 ? '18rem' : '30rem'};
@@ -20,8 +20,6 @@ const StyledImage1 = styled.div`
         margin-left: 0;
     }
 `;
-const h2 = 'The EVolution is here. Increase grid resilience';
-const p = 'Our turn-key demand-response solution centrally manages residential EV charging points according to grid conditions. ZenCharge assists DSOs, utilities and grid managers to meet the e-mobility challenge by reducing investment need and cutting operational costs. ';
 
 class ZenGridComponent extends Component {
   
@@ -29,12 +27,13 @@ class ZenGridComponent extends Component {
     const props = this.props;
     return (
         <StyledMainRow className="ZenGridComponent align-items-md-center">
-          <Col xs={{size: 12, order: 2}} md={{size: 6, order: 1}} className="align-self-start">
+          <Col xs={{size: 12, order: 2}} md={{size: 6, order: 1}} 
+            className="align-self-start pl-4 pl-md-0 py-5 py-md-0">
             <StyledImage1 className="imageLeft1Holder"></StyledImage1>
            </Col>
-          <Col xs={{size: 12, order: 1}} md={{size: 6, order:2}}>
-              <StyledHeader2>{h2}</StyledHeader2>
-              <p>{p}</p>
+          <Col xs={{size: 12, order: 1}} md={{size: 6, order:2}} className="pl-4 pl-md-0 py-5 py-md-0">
+              <StyledHeader2>{Texts.grid.header}</StyledHeader2>
+              <p>{Texts.grid.p}</p>
               <StyledLink1 href="/zengrid">
                 <object id="blue-line" data={BlueLineSVG} type="image/svg+xml" className="w-25">
                   <img src={BlueLineSVG} />

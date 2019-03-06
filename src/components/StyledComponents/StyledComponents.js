@@ -28,7 +28,7 @@ export const StyledFluidContainer = styled.section`
 `;
 
 export const StyledHeader1 = styled.h1`
-    font-size: 3rem;
+    font-size: 30px;
     color: #ffffff;
 `;
 
@@ -41,13 +41,13 @@ export const StyledHeader2 = styled.h2`
     color:transparent;
     -webkit-background-clip: text;
     background-clip: text;
-    font-size: 2.4rem;
+    font-size: 24px;
 `;
 
 export const StyledLink1 = styled.a`
     font-family: 'MontHeavyDemo', 'Impact', 'Arial', sans-serif;
     color: ${Colors.midblue};
-    font-size: 1.2rem;
+    font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     &:hover, &:active, &:focus {
@@ -62,7 +62,7 @@ export const StyledLink2 = styled.a`
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
     color: #ffffff;
-    font-size: 1.6rem;
+    font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     &:hover, &:active, &:focus {
@@ -77,7 +77,7 @@ export const StyledNavLink = styled(NavLink)`
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
     color: #ffffff;
-    font-size: 1.2rem;
+    font-size: 16px;
     text-align: right;
     &:hover, &:active, &:focus {
         color: #ffffff;
@@ -98,7 +98,7 @@ export const StyledIcon = styled(FontAwesomeIcon)`
 export const StyledButton1 = styled.button`
     font-family: 'MontHeavyDemo', 'Impact', 'Arial', sans-serif;
     color: #ffffff;
-    font-size: 1.2rem;
+    font-size: 16px;
     background: ${Colors.gradientText};
     color: #ffffff;
     border: 1px solid transparent;
@@ -143,7 +143,7 @@ export const StyledInput = styled.input`
     width: 70%!important;
     display: inline-block!important;
     padding: 0.375rem 0.75rem;
-    font-size: 1.2rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
     color: ${Colors.lightText};
