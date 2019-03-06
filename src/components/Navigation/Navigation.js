@@ -5,34 +5,52 @@ import { Collapse,
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink } from 'reactstrap';
-import logo from '../../logo.svg';
+  } from 'reactstrap';
+import onClickOutside from 'react-onclickoutside';
+import { StyledIcon, StyledNavLink } from '../StyledComponents/StyledComponents';
+import NavImage from '../../images/logo_temp.png';
+
 
 class Navigation extends Component {
-    render() {
-      return (
-        <Navbar expand="md">
-            <NavbarBrand href="/"><img style={{maxWidth: '100px'}}src={logo} /></NavbarBrand>
-            <NavbarToggler onClick={this.toggle}>MENU</NavbarToggler>
-            <Collapse isOpen={true} navbar>
-                <Nav className="ml-auto" navbar>
-                <NavItem>
-                    <NavLink href="/zengrid">Zen Grids</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink href="/zenfleet">Zen Fleets</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink href="/#contact">Contact</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink href="https://medium.com/met3r" target="_blank">Our news</NavLink>
-                </NavItem>
-                </Nav>
-            </Collapse>
-        </Navbar>
-      );
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOpen : false,
     }
   }
+
+  toggleNavbar = () => {
+    this.setState({
+      isOpen: !this.state.isOpen
+    })
+  }
   
-  export default Navigation;
+  render() {
+    return (
+      <Navbar expand="md">
+          <NavbarBrand href="/"><img src={NavImage} style={{maxWidth: '200px'}} /></NavbarBrand>
+          <NavbarToggler onClick={this.toggleNavbar}>
+            <StyledIcon icon="bars" size="lg"/>
+          </NavbarToggler>
+          <Collapse isOpen={this.state.isOpen} navbar>
+              <Nav className="ml-auto" navbar>
+              <NavItem>
+                  <StyledNavLink href="/zengrid">Zen Grids</StyledNavLink>
+              </NavItem>
+              <NavItem>
+                  <StyledNavLink href="/zenfleet">Zen Fleets</StyledNavLink>
+              </NavItem>
+              <NavItem>
+                  <StyledNavLink href="/#contact">Contact</StyledNavLink>
+              </NavItem>
+              <NavItem>
+                  <StyledNavLink href="https://medium.com/met3r" target="_blank">Our news</StyledNavLink>
+              </NavItem>
+              </Nav>
+          </Collapse>
+      </Navbar>
+    );
+  }
+  }
+  
+  export default onClickOutside(Navigation);
