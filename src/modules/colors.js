@@ -12,4 +12,5 @@ export const Colors = {
     gradientTextMoz: '-moz-linear-gradient(left, #2F3268, #005FE8)',
     gradientTextMs: '-ms-linear-gradient(left, #2F3268, #005FE8)',
     gradientTextO: '-o-linear-gradient(left, #2F3268, #005FE8)',
+    gradientBg: 'linear-gradient(to bottom, #2F3268, #2D38C3)',
 }
