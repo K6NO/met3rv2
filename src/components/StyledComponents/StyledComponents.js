@@ -4,23 +4,25 @@ import { Colors } from '../../modules/colors';
 import { device } from '../../modules/devices';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-
-export const StyledHeader1 = styled.h1`
-    font-size: 3rem;
-    color: #ffffff;
-`;
-
 export const StyledContainer = styled.section`
     @media ${device.lg} {
         max-width: 960px;
         width: 100%;
         margin: 0 auto;
         box-sizing: border-box;
+        padding-right: 15px;
+        padding-left: 15px;
     }
     @media ${device.xl} {
         max-width: 1140px;
     }
 `;
+
+export const StyledHeader1 = styled.h1`
+    font-size: 3rem;
+    color: #ffffff;
+`;
+
 export const StyledHeader2 = styled.h2`
     background-image: ${Colors.gradientTextWebkit}; /* For Chrome and Safari */
     background-image: ${Colors.gradientTextMoz}; /* For old Fx (3.6 to 15) */
@@ -30,13 +32,13 @@ export const StyledHeader2 = styled.h2`
     color:transparent;
     -webkit-background-clip: text;
     background-clip: text;
-    font-size: 3.6rem;
+    font-size: 2.4rem;
 `;
 
 export const StyledLink1 = styled.a`
     font-family: 'MontHeavyDemo', 'Impact', 'Arial', sans-serif;
     color: ${Colors.midblue};
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     &:hover, &:active, &:focus {
@@ -84,11 +86,10 @@ export const StyledIcon = styled(FontAwesomeIcon)`
   color: #ffffff;
 `;
 
-
 export const StyledButton1 = styled.button`
     font-family: 'MontHeavyDemo', 'Impact', 'Arial', sans-serif;
     color: #ffffff;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     background: ${Colors.gradientText};
     color: #ffffff;
     border: 1px solid transparent;
@@ -110,7 +111,7 @@ export const StyledButton1 = styled.button`
 
 export const StyledButton2 = styled(StyledButton1)`
     color: #ffffff;
-    background: ${Colors.midblue};
+    background: transparent;
     color: #ffffff;
     border: 1px solid white;
     border-radius: 5px;

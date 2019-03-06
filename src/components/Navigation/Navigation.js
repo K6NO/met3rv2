@@ -27,13 +27,13 @@ class Navigation extends Component {
   
   render() {
     return (
-      <Navbar expand="md">
+      <Navbar expand="md" className="px-0">
           <NavbarBrand href="/"><img src={NavImage} style={{maxWidth: '200px'}} /></NavbarBrand>
           <NavbarToggler onClick={this.toggleNavbar}>
             <StyledIcon icon="bars" size="lg"/>
           </NavbarToggler>
           <Collapse isOpen={this.state.isOpen} navbar>
-              <Nav className="ml-auto" navbar>
+              <Nav className="ml-auto mr-2 mr-sm-0" navbar>
               <NavItem>
                   <StyledNavLink href="/zengrid">Zen Grids</StyledNavLink>
               </NavItem>

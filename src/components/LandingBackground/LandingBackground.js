@@ -27,19 +27,21 @@ Inspiration: https://webdesign.tutsplus.com/tutorials/create-an-isometric-layout
 const StyledContainer = styled.div`
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 120%;
     overflow: hidden; 
 `;
 
 const StyledIsoBackground = styled.div`
+     
     width: 200%;
-    height: 155%;
+    height: ${window.innerWidth > window.innerHeight 
+    ? "170%" : "150%"};
     position: absolute;
     background: ${Colors.gradientBg};
     top: ${window.innerWidth > window.innerHeight 
-    ? "-70%" : "-60%"};
+    ? "-72%" : "-60%"};
     left: ${window.innerWidth > window.innerHeight 
-    ? "-50%" : "-80%"};
+    ? "-54%" : "-80%"};
     transform: rotateX(60deg) rotateY(0) rotateZ(-50deg);
 `;
 

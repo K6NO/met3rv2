@@ -26,19 +26,20 @@ class App extends Component {
     const props = this.props;
     return (
         <div className="App">
-        <LandingBackground />
-          <StyledContainer className="container px-0">
-          <Navigation />
+          <LandingBackground />
+          <StyledContainer className="px-0">
+            <Navigation />
           </StyledContainer>
           <StyledContainer >
               <JumbotronComponent {...props} />
-              <PartnersComponent {...props} />
-            
+              {window.innerWidth > 480 
+                ? <PartnersComponent {...props} /> 
+                : ''}
           </StyledContainer>
-          <section>
+          <StyledContainer>
             <ZenGridComponent {...props} />
             <ZenFleetComponent {...props} />
-          </section>
+          </StyledContainer>
 
           <section className="container-fluid">
             <Contact />
