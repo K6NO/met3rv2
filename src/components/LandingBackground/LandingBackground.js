@@ -33,15 +33,14 @@ const StyledContainer = styled.div`
 
 const StyledIsoBackground = styled.div`
     width: 200%;
-    height: 150%;
+    height: 155%;
     position: absolute;
-    background: ${Colors.midblue};
+    background: ${Colors.gradientBg};
     top: ${window.innerWidth > window.innerHeight 
-    ? "-62%" : "-60%"};
+    ? "-70%" : "-60%"};
     left: ${window.innerWidth > window.innerHeight 
-    ? "-50%" : "-85%"};
-    transform: rotateX(60deg) rotateY(0) rotateZ(-45deg);
-    
+    ? "-50%" : "-80%"};
+    transform: rotateX(60deg) rotateY(0) rotateZ(-50deg);
 `;
 
 const LandingBackground = (props) => (
@@ -50,24 +49,3 @@ const LandingBackground = (props) => (
     </StyledContainer> 
 )
 export default LandingBackground;
-
-// const StyledTriBackground = styled.div`
-//     width: 0;
-//     height: 0;
-//     position: absolute;
-//     bottom: ${window.innerHeight > window.innerWidth ? "10%" : "10%"};;
-//     left: -${window.innerWidth * .8}px;
-//     border-left: ${window.innerWidth * 1}px solid transparent;
-//     border-right: ${window.innerWidth * 1}px solid transparent;
-//     border-top: ${window.innerHeight > window.innerWidth 
-//         ? `${window.innerHeight * .5}px solid #fc5e5e` : `${window.innerHeight * .9}px solid #fc5e5e`};
-// `;
-
-// const StyledRectBackground = styled.div`
-//     width: 100%;
-//     height: ${window.innerHeight > window.innerWidth ? "55%" : "5rem"};
-//     position: absolute;
-//     background: #fc5e5e;
-//     top: 0;
-//     left: 0;
-// `;

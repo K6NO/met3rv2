@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faCheckSquare, faBars } from '@fortawesome/free-solid-svg-icons';
 import Navigation from './components/Navigation/Navigation';
 import JumbotronComponent from './components/JumbotronComponent/JumbotronComponent';
 import PartnersComponent from './components/PartnersComponent/PartnersComponent';
@@ -7,8 +9,16 @@ import ZenFleetComponent from './components/ZenFleetComponent/ZenFleetComponent'
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import LandingBackground from './components/LandingBackground/LandingBackground';
+import { StyledContainer } from './components/StyledComponents/StyledComponents';
+
 
 import './App.css';
+
+/** Initialise font awesome icons. Need to import and add them explicitly to the library
+ * so that it is available as 'FontAwesomeIcon' import in all components
+ * https://github.com/FortAwesome/react-fontawesome#basic
+ */
+library.add(faCheckSquare, faBars)
 
 class App extends Component {
   
@@ -17,14 +27,17 @@ class App extends Component {
     return (
         <div className="App">
         <LandingBackground />
-          <header className="container">
+          <StyledContainer className="container px-0">
           <Navigation />
-          </header>
-          <section className="container">
+          </StyledContainer>
+          <StyledContainer >
               <JumbotronComponent {...props} />
               <PartnersComponent {...props} />
-              <ZenGridComponent {...props} />
-              <ZenFleetComponent {...props} />
+            
+          </StyledContainer>
+          <section>
+            <ZenGridComponent {...props} />
+            <ZenFleetComponent {...props} />
           </section>
 
           <section className="container-fluid">

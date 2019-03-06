@@ -14,32 +14,23 @@ const supporterBox = [
     {altText: 'Lorinc', src: 'https://via.placeholder.com/150'},
     {altText: 'Gyuri', src: 'https://via.placeholder.com/150'},
 ]
-class JumbotronComponent extends Component {
+class PartnersComponent extends Component {
   
   render() {
     const props = this.props;
     return (
-        <Row className="PartmersComponent">
-        <Col xs={6}>
-            
-        </Col>
-        <Col xs={6}>
-            <Row>
-                <Col xs={12} sm={6}>
-                    <h4>{partnerText}</h4>
-                    <CarouselComponent items={partnerBox}/>
-                </Col>
-                <Col xs={12} sm={6}>
-                    <h4>{supporterText}</h4>
-                    <CarouselComponent items={supporterBox}/>
-                </Col>
-            </Row>
-        </Col>
-          
-        </Row>
-
+        <div>
+            <Col xs={12} sm={6}>
+                <h4>{partnerText}</h4>
+                <CarouselComponent items={partnerBox}/>
+            </Col>
+            <Col xs={12} sm={6}>
+                <h4>{supporterText}</h4>
+                <CarouselComponent items={supporterBox}/>
+            </Col>
+        </div>
     );
   }
 }
 
-export default JumbotronComponent;
+export default PartnersComponent;
