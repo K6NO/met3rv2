@@ -17,8 +17,12 @@
     left: 0;
     height: 100%;
     width: 2px;
-    background-color: #fff;
+    background: linear-gradient(to right, transparent, #ffffff);
+    /* background-color: #2F3268; */
     transform-origin: 0 50%;
+    border-top-right-radius: 30rem;
+    border-bottom-right-radius: 30rem;
+    filter: blur(8px);
   }
   
   .ml11 .line1 { 

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faCheckSquare, faBars } from '@fortawesome/free-solid-svg-icons';
@@ -23,20 +24,25 @@ class App extends Component {
   render() {
     const props = this.props;
     return (
+      <Router>
         <div className="App">
           <StyledContainer className="px-0">
             <Navigation />
           </StyledContainer>
-          {/* <LandingPage props={props} /> */}
-          <FeaturePage props={props} />
+          <Switch>
+            <Route name="landing" path="/" exact component={LandingPage} {...props} />
+            <Route name="landing" path="/zenfleet" exact component={FeaturePage} {...props} />
+            <Route name="landing" path="/zengrid" exact component={FeaturePage} {...props} />
+                        {/* <LandingPage props={props} /> */}
+          </Switch>
           <StyledFluidContainer id="contact">
             <Contact />
-            </StyledFluidContainer>
+          </StyledFluidContainer>
           <StyledFluidContainer id="footer">
             <Footer />
           </StyledFluidContainer>
         </div>
-
+      </Router>
     );
   }
 }

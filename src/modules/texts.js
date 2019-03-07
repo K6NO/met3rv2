@@ -1,4 +1,8 @@
 export const Texts = {
+    jumbo: {
+        title: 'zEnchargE',
+        heading: 'EV charging protocol'
+    },
     grid: {
         header: 'The EVolution is here. Increase grid resilience',
         p: 'Our turn-key demand-response solution centrally manages residential EV charging points according to grid conditions. ZenCharge assists DSOs, utilities and grid managers to meet the e-mobility challenge by reducing investment need and cutting operational costs.',

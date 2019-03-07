@@ -19,18 +19,27 @@ const StyledJumbotron = styled(Row)`
 
 const StyledFeatureHeader = styled(StyledHeader2)`
     text-align: ${props => props.i%2 === 0 ? 'right' : 'left'};
-    font-size: 30px;
+    font-size: 24px;
+    font-size: 2.4rem;
+    padding-top: 6rem;
     @media ${device.md} {
         font-size: 30px;
+        font-size: 3rem;
+        padding-top: 9rem;
     }
 `;
 const StyledHeaderText = styled.p`
   text-align: center;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 12px;
+  font-size: 1.2rem;
 `;
 const StyledText = styled.p`
   text-align: ${props => props.i%2 === 0 ? 'right' : 'left'};
+  padding-bottom: 3rem;
+  @media ${device.md} {
+    padding-bottom: 3rem;
+  }
 `;
 const StyledLightText = styled.p`
   text-align: ${props => props.i%2 === 0 ? 'left' : 'right'};
@@ -60,19 +69,21 @@ const FeaturePage = (props) => (
     <StyledContainer >
         {Texts.grid.features.map((feature, i) => 
             <Row key={i}>
-                <Col xs={12} 
-                  md={i%2 === 0 ? {size: 6, order: 1} : {size: 6, order: 2}}
-                  className="my-auto"
-                  style={i%2 !== 0 ? stylee : {}}>
-                  <StyledFeatureHeader i={i} className="pt-5 pb-2">{feature.title}</StyledFeatureHeader>
-                  <StyledText className="pb-5" i={i}>{feature.p}</StyledText>
-                </Col>
-                <Col xs={12} 
-                  md={i%2 === 0 ? {size: 6, order: 2} : {size: 6, order: 1}}
-                  className=""
-                  style={i%2 === 0 ? stylee : {}}>
-                  <StyledLightText i={i} className="pb-5">{feature.p}</StyledLightText>
-                </Col>
+              <Col xs={12} 
+                md={i%2 === 0 ? {size: 6, order: 1} : {size: 6, order: 2}}
+                className="my-auto"
+                style={i%2 !== 0 ? stylee : {}}>
+                <StyledFeatureHeader i={i} className="pb-2 px-3">{feature.title}</StyledFeatureHeader>
+                <StyledText className={`px-3 ${i%2 === 0 ? 'pl-md-0' : 'pr-md-0'}`} i={i}>{feature.p}</StyledText>
+              </Col>
+              <Col xs={12} 
+                md={i%2 === 0 ? {size: 6, order: 2} : {size: 6, order: 1}}
+                className="d-flex align-items-center"
+                style={i%2 === 0 ? stylee : {}}>
+                <StyledLightText i={i} className={`pb-5 pb-sm-0 px-3 ${i%2 === 0 ? 'pl-md-0' : 'pr-md-0'}`}>
+                  {feature.alt}
+                </StyledLightText>
+              </Col>
             </Row>)}
     </StyledContainer>
   </div>

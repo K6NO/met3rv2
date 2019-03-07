@@ -30,7 +30,8 @@ const StyledContainer = styled.div`
     height: 120%;
     top: 0;
     left: 0;
-    overflow: hidden; 
+    overflow: hidden;
+    z-index: -1;
 `;
 
 const StyledIsoBackground = styled.div`

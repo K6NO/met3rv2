@@ -2,11 +2,15 @@ import React, { Component } from 'react';
 import { Row, Col } from 'reactstrap';
 import TextAnimationWrapper from '../TextAnimationComponent/TextAnimationWrapper';
 import { device } from '../../modules/devices';
+import { Texts } from '../../modules/texts';
 import { StyledHeader1, StyledButton2 } from '../StyledComponents/StyledComponents';
 import styled from 'styled-components';
 
-const title = 'MET3R ZenCharge';
-const h1 = ' EV charging network.';
+const StyledZenCharge = styled(StyledHeader1)`
+  font-family: 'GaoelM3TER';
+  font-size: 3rem;
+  padding-bottom: 2rem;
+`;
 
 const JumboImage1 = styled.div`
     height: 20rem;
@@ -33,8 +37,9 @@ class JumbotronComponent extends Component {
         <StyledJumbotron>
           <Col xs={12} className="text-left d-flex align-items-center">
               <Col xs={12} lg={8}>
+                <StyledZenCharge>{Texts.jumbo.title}</StyledZenCharge>
                 <TextAnimationWrapper />
-                <StyledHeader1>{h1}</StyledHeader1>
+                <StyledHeader1>{Texts.jumbo.heading}</StyledHeader1>
                 <StyledButton2 className="mt-4">Learn More</StyledButton2>
               </Col>
               <Col xs={12} lg={4}>

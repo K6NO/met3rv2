@@ -40,52 +40,72 @@ class TextAnimationComponent extends Component {
             loop: false,
         })
         .add({
+            targets: '.ml11 .line',
+            width: 0,
+            translateX: 0,
+            duration: 1,
+            opacity: 0.2,
+            scaleY: 0
+        })
+        .add({
             targets: '.ml11',
-            opacity: 0.5,
+            opacity: 1,
             duration: 1
         })
         .add({
             targets: '.ml11 .line',
-            translateX: [0, 0],
+            scaleY: [0,.8],
+            opacity: [0.2,0.8],
+            easing: "easeOutExpo",
             duration: 1,
-            opacity: 0.5,
-            scaleY: 0
         })
         .add({
             targets: '.ml11 .line',
-            scaleY: [0,1],
-            opacity: [0.5,1],
-            easing: "easeOutExpo",
-            duration: 700,
-            delay: 100
+            width: [this.lettersElement 
+                ? this.lettersElement.offsetWidth + 50
+                : 300],
+            easing: "easeInOutSine",
+            duration: 100,
         })
         .add({
             targets: '.ml11 .line',
-            translateX: [0, this.lettersElement 
-                ? this.lettersElement.offsetWidth + 15
-                : 200],
-            easing: "easeOutExpo",
-            duration: 700,
-            delay: 100
-        }).add({
+            width: 0,
+            translateX: this.lettersElement 
+                ? this.lettersElement.offsetWidth + 50
+                : 300,
+            easing: "easeInOutSine",
+            duration: 100,
+            // delay: 200
+        })
+        .add({
             targets: '.ml11 .letter',
             opacity: [0,1],
             easing: "easeOutExpo",
-            duration: 600,
-            offset: '-=775',
+            duration: 400,
             delay: function(el, i) {
             return 34 * (i+1)
             }
-        }).add({
+        }, '-=250')
+        .add({
             targets: '.ml11',
             opacity: 0,
             duration: 1000,
             easing: "easeOutExpo",
-            delay: 1000,
+            delay: 500,
             complete: () => this.props.animCompleteCallback(),
         });
     }
     
+// .add({
+        //     targets: '.ml11 .line',
+        //     translateX: [0, this.lettersElement 
+        //         ? this.lettersElement.offsetWidth + 15
+        //         : 200],
+        //     easing: "easeOutExpo",
+        //     duration: 700,
+        //     delay: 100
+        // })
+
     wrapLetters = (word) => {
         if (this.lettersElement) {
             [...this.lettersElement.children].forEach(e => delete this.lettersElement.children[e])
