@@ -46,8 +46,10 @@ const FeaturePage = (props) => (
         </StyledJumbotron>
         <StyledContainer >
             {Texts.grid.features.map((feature, i) => 
-                <Row key={i}>
-                    <Col xs={12} md={i%2 === 0 ? {size: 6, order: 1} : {size: 6, order: 2}}>
+                <Row className="py-5" key={i}>
+                    <Col xs={12} 
+                        md={i%2 === 0 ? {size: 6, order: 1} : {size: 6, order: 2}}
+                        className="py-5">
                         <StyledFeatureHeader i={i}>{feature.title}</StyledFeatureHeader>
                         <StyledText i={i}>{feature.p}</StyledText>
                     </Col>
