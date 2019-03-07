@@ -7,10 +7,12 @@ export const Colors = {
     pink: '#A265E9',
     text: '#2C2C2C',
     lightText: '#DEDEDE',
+    midText: '#aaaaaa',
     gradientText: 'linear-gradient(to right, #2F3268, #005FE8)',
     gradientTextWebkit: '-webkit-linear-gradient(left #2F3268, #005FE8)',
     gradientTextMoz: '-moz-linear-gradient(left, #2F3268, #005FE8)',
     gradientTextMs: '-ms-linear-gradient(left, #2F3268, #005FE8)',
     gradientTextO: '-o-linear-gradient(left, #2F3268, #005FE8)',
     gradientBg: 'linear-gradient(to bottom, #2F3268, #2D38C3)',
+    gradientLine: 'linear-gradient(to bottom, #2F3268, #2D38C3)',
 }

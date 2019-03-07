@@ -5,14 +5,11 @@ import { device } from '../../modules/devices';
 const StyledContainer = styled.div`
     position: absolute;
     width: 100%;
-    height: ${`${window.innerHeight * .8}px`};
+    height: 100px;
     top: 0;
     left: 0;
     overflow: hidden; 
     z-index:-1;
-    @media ${device.md} {
-        height: ${`${window.innerHeight * .6}px`};
-    }
 `;
 
 const StyledBackground = styled.div`
