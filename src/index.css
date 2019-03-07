@@ -8,6 +8,12 @@
   src: local('WorkSansRegular'), url(./fonts/WorkSans-Regular.woff) format('woff');
   src: local('WorkSansRegular'), url(./fonts/WorkSans-Regular.ttf) format('truetype'); 
 }
+@font-face {
+  font-family: 'GaoelM3TER';
+  src: local('GaoelM3TER'), url(./fonts/Gaoel-M3TER.woff) format('woff');
+  src: local('GaoelM3TER'), url(./fonts/Gaoel-M3TER.ttf) format('truetype'); 
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -16,6 +22,8 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-size: 62.5%;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'MontHeavyDemo', 'Impact', 'Arial', sans-serif;
@@ -24,4 +32,9 @@ h1, h2, h3, h4, h5, h6 {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+p {
+  font-size: 12px;
+  font-size: 1.2rem;
 }
