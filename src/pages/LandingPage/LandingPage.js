@@ -4,10 +4,17 @@ import PartnersComponent from '../../components/PartnersComponent/PartnersCompon
 import ZenGridComponent from '../../components/ZenGridComponent/ZenGridComponent';
 import ZenFleetComponent from '../../components/ZenFleetComponent/ZenFleetComponent';
 import LandingBackground from '../../components/LandingBackground/LandingBackground';
-import { StyledContainer, StyledFluidContainer } from '../../components/StyledComponents/StyledComponents';
+import { StyledContainer } from '../../components/StyledComponents/StyledComponents';
 
-const LandingPage = (props) => (
-    <div id="landingPage">
+class LandingPage extends React.Component {
+    constructor(props) {
+        super(props);
+    };
+
+    render() {
+        const { props } = this.props;
+        return (
+            <div id="landingPage">
         <LandingBackground />
             <StyledContainer >
                 <JumbotronComponent {...props} />
@@ -16,10 +23,17 @@ const LandingPage = (props) => (
                 : ''}
             </StyledContainer>
         <StyledContainer>
-            <ZenGridComponent {...props} />
+            <ZenGridComponent  {...props} />
             <ZenFleetComponent {...props} />
-        </StyledContainer>      
+        </StyledContainer>
+        <StyledContainer>
+            {window.innerWidth < 480 
+                ? <PartnersComponent {...props} /> 
+                : ''}
+        </StyledContainer>    
     </div>
-);
+        )
+    }
+}
   
 export default LandingPage;

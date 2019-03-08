@@ -10,7 +10,7 @@ import { StyledContainer, StyledHeader1, StyledHeader2 } from '../../components/
 const StyledJumbotron = styled(Row)`
   height: ${`${window.innerHeight * .8}px`};
   padding: 3rem 1rem;
-  background: #2D38C3;
+  background: ${Colors.gradientBg};
   @media ${device.lg} {
     height: ${`${window.innerHeight * .6}px`};
     padding: 6rem 0;
@@ -23,8 +23,8 @@ const StyledFeatureHeader = styled(StyledHeader2)`
     font-size: 2.4rem;
     padding-top: 6rem;
     @media ${device.md} {
-        font-size: 30px;
-        font-size: 3rem;
+        /* font-size: 30px;
+        font-size: 3rem; */
         padding-top: 9rem;
     }
 `;
@@ -54,8 +54,6 @@ const stylee = {
   backgroundPosition:'0 100% 0 0',
   backgroundRepeat:'no-repeat'
 }
-// style={i%2 === 0 ? {borderRight: `2px solid ${Colors.gradientLine}`} : {borderLeft: `1px solid ${Colors.gradientLine}`}}>
-// style={i%2 !== 0 ? {borderRight: `2px solid ${Colors.gradientLine}`} : {borderLeft: `1px solid ${Colors.gradientLine}`}}>
 
 const FeaturePage = (props) => (
   <div id="FeaturePage">

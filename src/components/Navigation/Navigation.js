@@ -6,10 +6,11 @@ import { Collapse,
   Nav,
   NavItem,
   } from 'reactstrap';
+import styled from 'styled-components';
 import onClickOutside from 'react-onclickoutside';
-import { StyledIcon, StyledNavLink } from '../StyledComponents/StyledComponents';
+import { StyledIcon } from '../StyledComponents/StyledComponents';
 import NavImage from '../../images/logo_temp.png';
-
+import AnimLink from './AnimLink';
 
 class Navigation extends Component {
   constructor(props) {
@@ -33,18 +34,18 @@ class Navigation extends Component {
             <StyledIcon icon="bars" size="lg"/>
           </NavbarToggler>
           <Collapse isOpen={this.state.isOpen} navbar>
-              <Nav className="ml-auto mr-2 mr-sm-0" navbar>
+              <Nav className="ml-auto mr-2 mr-sm-0 text-right" navbar>
               <NavItem>
-                  <StyledNavLink href="/zengrid">Zen Grids</StyledNavLink>
+                  <AnimLink text={'ZenGrids'} path={'/zengrid'} />
               </NavItem>
               <NavItem>
-                  <StyledNavLink href="/zenfleet">Zen Fleets</StyledNavLink>
+                  <AnimLink text={'ZenFleets'} path={"/zenfleet"} />
               </NavItem>
               <NavItem>
-                  <StyledNavLink href="/#contact">Contact</StyledNavLink>
+                <AnimLink text={'Contact'} path={"/#contact"} />
               </NavItem>
               <NavItem>
-                  <StyledNavLink href="https://medium.com/met3r" target="_blank">Our news</StyledNavLink>
+                <AnimLink text={'Our news'} path={"https://medium.com/met3r"} />
               </NavItem>
               </Nav>
           </Collapse>

@@ -27,7 +27,7 @@ class ZenFleetComponent extends Component {
   render() {
     const props = this.props;
     return (
-      <StyledMainRow className="ZenGridComponent align-items-md-center">
+      <StyledMainRow id="zenfleet" className="ZenGridComponent align-items-md-center">
       <Col xs={{size: 12, order: 2}} md={{size: 6, order:  2}} className="align-self-end py-5 py-md-0">
         <StyledImage1 className="imageLeft1Holder"></StyledImage1>
        </Col>

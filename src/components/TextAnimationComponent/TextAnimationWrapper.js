@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
+import { Texts } from '../../modules/texts';
 import TextAnimationComponent from './TextAnimationComponent';
-const words = [
-    'Advanced',
-    'Managed',
-    'Distributed',
-    'Low cost',
-    'Orchestrated'
-]
+const words = Texts.jumbo.animeWords;
 class TextAnimationWrapper extends Component {
     constructor(props) {
         super(props);

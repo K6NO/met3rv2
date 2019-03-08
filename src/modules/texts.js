@@ -1,7 +1,16 @@
 export const Texts = {
     jumbo: {
         title: 'zEnchargE',
-        heading: 'EV charging protocol'
+        heading: 'charging of Electric Vehicles',
+        animeWords: [
+            'Balanced',
+            'Controlled',
+            'Optimized',
+            'Distributed',
+            'Economic',
+            'Orchestrated',
+            'Networked'
+        ]
     },
     grid: {
         header: 'The EVolution is here. Increase grid resilience',

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { NavLink } from 'reactstrap';
 import { Colors } from '../../modules/colors';
 import { device } from '../../modules/devices';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -29,7 +28,7 @@ export const StyledFluidContainer = styled.section`
 
 export const StyledHeader1 = styled.h1`
     font-size: 30px;
-    color: #ffffff;
+    color: ${Colors.white};
 `;
 
 export const StyledHeader2 = styled.h2`
@@ -63,49 +62,79 @@ export const StyledLink2 = styled.a`
     font-family: 'WorkSansRegular', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-    color: #ffffff;
+    color: ${Colors.white};
     font-size: 16px;
     font-size: 1.6rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     &:hover, &:active, &:focus {
-        color: #ffffff;
+        color: ${Colors.white};
         outline: none;
         text-decoration: none;
     }
 `;
 
-export const StyledNavLink = styled(NavLink)`
-    font-family: 'WorkSansRegular', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-    color: #ffffff;
+export const StyledButtonLink = styled.a`
+    display: inline-block;
+    font-size: 12px;
+    font-size: 1.2rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: .8rem 2.5rem;
+    min-width: 60px;
+    font-family: 'MontHeavyDemo', 'Impact', 'Arial', sans-serif;
+    background: transparent;
+    text-decoration: none;
+    color: ${Colors.white}!important;
+    
+    &:disabled {
+        opacity: .5;
+    }
+    &:disabled&:hover {
+        opacity: .5;
+    }
+    &:hover, &:active, &:focus, &:focus:active, &:active:hover {
+        cursor: pointer;
+        background: ${Colors.darkblue};
+        text-decoration: none;
+        box-shadow: 0 0 1px 1px #cccccc;
+        color: ${Colors.white};
+        border: 1px solid ${Colors.white};
+    }
+`;
+
+export const StyledNavLink = styled.a`
+    font-family: 'MontHeavyDemo', 'Impact', 'Arial', sans-serif;
+    color: ${Colors.white};
     font-size: 12px;
     font-size: 1.2rem;
     text-align: right;
+	padding: 0 1rem;
+    height: 1.2em;
+    margin-top: 2rem;
     &:hover, &:active, &:focus {
-        color: #ffffff;
+        color: ${Colors.white};
         outline: none;
         text-decoration: none;
     }
     @media ${device.lg} {
-        padding-top: 1rem;
+        margin-top: 0;
         padding-left: 2rem!important;
         padding-right: .8rem!important;
     }
 `;
 
 export const StyledIcon = styled(FontAwesomeIcon)`
-  color: #ffffff;
+  color: ${Colors.white};
 `;
 
 export const StyledButton1 = styled.button`
     font-family: 'MontHeavyDemo', 'Impact', 'Arial', sans-serif;
-    color: #ffffff;
+    color: ${Colors.white};
     font-size: 12px;
     font-size: 1.2rem;
     background: ${Colors.gradientText};
-    color: #ffffff;
+    color: ${Colors.white};
     border: 1px solid transparent;
     border-radius: 5px;
     padding: .8rem 2.5rem;
@@ -125,9 +154,9 @@ export const StyledButton1 = styled.button`
 `;
 
 export const StyledButton2 = styled(StyledButton1)`
-    color: #ffffff;
+    color: ${Colors.white};
     background: transparent;
-    color: #ffffff;
+    color: ${Colors.white};
     border: 1px solid white;
     border-radius: 5px;
     &:disabled {
@@ -139,13 +168,13 @@ export const StyledButton2 = styled(StyledButton1)`
     &:hover, &:active, &:focus, &:focus:active, &:active:hover {
         background: ${Colors.darkblue};
         box-shadow: 0 0 1px 1px #cccccc;
-        color: #ffffff;
-        border: 1px solid #ffffff;
+        color: ${Colors.white};
+        border: 1px solid ${Colors.white};
     }
 `;
 
 export const StyledInput = styled.input`
-    width: 70%!important;
+    width: 100%;
     display: inline-block!important;
     padding: 0.375rem 0.75rem;
     font-size: 12px;
@@ -157,4 +186,7 @@ export const StyledInput = styled.input`
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
+    @media ${device.lg} {
+        width: 70%!important;
+    }
 `;

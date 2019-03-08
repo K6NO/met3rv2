@@ -74,8 +74,7 @@ class TextAnimationComponent extends Component {
                 ? this.lettersElement.offsetWidth + 50
                 : 300,
             easing: "easeInOutSine",
-            duration: 100,
-            // delay: 200
+            duration: 80,
         })
         .add({
             targets: '.ml11 .letter',
@@ -85,7 +84,7 @@ class TextAnimationComponent extends Component {
             delay: function(el, i) {
             return 34 * (i+1)
             }
-        }, '-=250')
+        }, '-=200')
         .add({
             targets: '.ml11',
             opacity: 0,
@@ -93,18 +92,8 @@ class TextAnimationComponent extends Component {
             easing: "easeOutExpo",
             delay: 500,
             complete: () => this.props.animCompleteCallback(),
-        });
-    }
-    
-// .add({
-        //     targets: '.ml11 .line',
-        //     translateX: [0, this.lettersElement 
-        //         ? this.lettersElement.offsetWidth + 15
-        //         : 200],
-        //     easing: "easeOutExpo",
-        //     duration: 700,
-        //     delay: 100
-        // })
+    });
+}
 
     wrapLetters = (word) => {
         if (this.lettersElement) {

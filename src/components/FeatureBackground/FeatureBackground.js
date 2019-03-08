@@ -15,7 +15,7 @@ const StyledContainer = styled.div`
 const StyledBackground = styled.div`
     width: 100%;
     height:100%;
-    background: ${Colors.midblue};
+    background: ${Colors.darkblue};
     /* transform: rotateX(60deg) rotateY(0) rotateZ(-50deg); */
 `;
 

@@ -36,7 +36,8 @@ const StyledContainer = styled.div`
 
 const StyledIsoBackground = styled.div`
      
-    width: 200%;
+    width: ${window.innerWidth > window.innerHeight 
+    ? "200%" : "240%"};
     height: ${window.innerWidth > window.innerHeight 
     ? "170%" : "150%"};
     position: absolute;
@@ -44,7 +45,7 @@ const StyledIsoBackground = styled.div`
     top: ${window.innerWidth > window.innerHeight 
     ? "-72%" : "-60%"};
     left: ${window.innerWidth > window.innerHeight 
-    ? "-54%" : "-80%"};
+    ? "-54%" : "-120%"};
     transform: rotateX(60deg) rotateY(0) rotateZ(-50deg);
 `;
 
