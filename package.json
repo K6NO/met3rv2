@@ -12,6 +12,7 @@
     "animejs": "^3.0.1",
     "bootstrap": "^4.3.1",
     "lodash": "^4.17.11",
+    "prop-types": "^15.7.2",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-onclickoutside": "^6.8.0",
