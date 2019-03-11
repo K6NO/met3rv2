@@ -7,10 +7,11 @@ import styled from 'styled-components';
 
 const StyledDiv = styled.div`
   height: 100px;
+  text-align: center;
 `;
 const StyledLogo = styled.img`
   max-width: 150px;
-  max-height: 100px;
+  max-height: 60px;
 `;
 
 
@@ -71,7 +72,7 @@ class CarouselComponent extends Component {
           next={this.next}
           previous={this.previous}
           ride={'carousel'}
-          interval={6000}
+          interval={4000}
         >
           {slides}
         </Carousel>

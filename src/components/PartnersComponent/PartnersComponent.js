@@ -4,12 +4,21 @@ import styled from 'styled-components';
 import { Colors } from '../../modules/colors';
 import { device } from '../../modules/devices';
 import CKICLogo from '../../images/logo-climate-kic.svg';
+import HiventuresLogo from '../../images/logo-hiventures.jpg';
+import MentonLogo from '../../images/logo-menton.png';
+import PpisLogo from '../../images/logo-ppis.png';
+import BlueprintLogo from '../../images/logo-blueprint.png';
+import NkmLogo from '../../images/logo-nkm.png';
 import CarouselComponent from '../CarouselComponent/CarouselComponent';
+import Art2Image from '../../images/art2@2x.png';
 
 const UtilityImage = styled.div`
-    height: 20rem;
-    width: 20rem;    
-    background-image: url('https://via.placeholder.com/200x200');
+    position: absolute;
+    z-index: 1;
+    top: 35%;
+    height: 22rem;
+    width: 22rem; 
+    background-image: ${`url('${Art2Image}')`};
     background-size: contain;
     background-position: center;
     margin-left: auto;
@@ -40,16 +49,15 @@ const StyledHeader = styled.h4`
 const partnerText = 'Our partners';
 const supporterText = 'Our supporters';
 const partnerBox = [
-    {   altText: 'Climate KIC', src: `${CKICLogo}`},
-    {   altText: 'Fasza', src: 'https://via.placeholder.com/100x100'},
-    {   altText: 'Distributed', src: 'https://via.placeholder.com/100x100'},
+    {   altText: 'Blueprint Energy', src: `${BlueprintLogo}`},
+    {   altText: 'Menton Energy Group', src: `${MentonLogo}`},
+    {   altText: 'Pannon Pro Innovations', src: `${PpisLogo}`},
 
 ];
 const supporterBox = [
-    {   altText: 'Lajos', src: `${CKICLogo}`},
-    {   altText: 'Lorinc', src: 'https://via.placeholder.com/100x100'},
-    {   altText: 'Gyuri', src: 'https://via.placeholder.com/100x100'},
-
+    {   altText: 'Climate KIC', src: `${CKICLogo}`},
+    {   altText: 'Hiventures Venture Capital Fund', src: `${HiventuresLogo}`},
+    {   altText: 'Nemzeti Kozmuvek - National Utilities', src: `${NkmLogo}`},
 ];
 class PartnersComponent extends Component {
   
@@ -57,8 +65,11 @@ class PartnersComponent extends Component {
     const props = this.props;
     return (
         <StyledRow className="align-content-end text-center">
-            <Col xs={12} md={{size: 6}} lg={{size: 6}}>
-                <UtilityImage />
+            <Col style={{height: '100%'}} xs={12} md={{size: 6}} lg={{size: 6}}>
+            {window.innerWidth < 1024  
+                ? '' 
+                : <UtilityImage />
+                }
             </Col>
             <Col className={'mt-auto'} xs={12} md={{size: 3}} lg={{size: 3}}>
                 <StyledHeader>{partnerText}</StyledHeader>

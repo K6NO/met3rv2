@@ -75,13 +75,14 @@ export const StyledLink2 = styled.a`
 `;
 
 export const StyledButtonLink = styled.a`
-    display: inline-block;
+    display: block;
+    min-width: 60px;
+    max-width: 200px;
     font-size: 12px;
     font-size: 1.2rem;
     border: 1px solid white;
     border-radius: 5px;
     padding: .8rem 2.5rem;
-    min-width: 60px;
     font-family: 'MontHeavyDemo', 'Impact', 'Arial', sans-serif;
     background: transparent;
     text-decoration: none;

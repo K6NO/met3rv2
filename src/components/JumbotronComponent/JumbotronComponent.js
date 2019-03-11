@@ -3,8 +3,9 @@ import { Row, Col } from 'reactstrap';
 import TextAnimationWrapper from '../TextAnimationComponent/TextAnimationWrapper';
 import { device } from '../../modules/devices';
 import { Texts } from '../../modules/texts';
-import { StyledHeader1, StyledButton2, StyledButtonLink } from '../StyledComponents/StyledComponents';
+import { StyledHeader1, StyledButtonLink } from '../StyledComponents/StyledComponents';
 import styled from 'styled-components';
+import WhiteImage from '../../images/art1.png';
 
 const StyledZenCharge = styled(StyledHeader1)`
   font-family: 'GaoelM3TER';
@@ -18,14 +19,26 @@ const StyledZenCharge = styled(StyledHeader1)`
 `;
 
 const JumboImage1 = styled.div`
-    height: 20rem;
-    width: 20rem;    
-    background-image: url('https://via.placeholder.com/200x200');
-    background-size: contain;
+    position: absolute;
+    background-image: ${`url('${WhiteImage}')`};
+    background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     margin-left: auto;
-    @media ${device.xl} {
-        margin-left: 0;
+    @media ${device.md} {
+      width: 30rem;
+      height: 22.1rem;
+      top: 30%;
+      left: -275%;
+      margin-left: 0;
+    }
+    @media ${device.lg} {
+      left: -10%;
+      top: 20%;
+      left: -35%;
+      width: 40rem;
+      height: 29.6rem;
+      margin-left: 0;
     }
 `;
 
@@ -34,26 +47,30 @@ const StyledJumbotron = styled(Row)`
   height: 55vh;
 `;
 
+const StyledHeader = styled(StyledHeader1)`
+  display: inline;
+`;
+
 class JumbotronComponent extends Component {
 
   render() {
 
     return (
         <StyledJumbotron>
-          <Col xs={12} className="text-left d-flex align-items-baseline align-items-sm-center">
-              <Col xs={12} lg={8}>
+          <Col xs={12} className="text-left d-flex align-items-sm-center">
+              <Col  xs={12} md={10} lg={6}>
                 <StyledZenCharge>{Texts.jumbo.title}</StyledZenCharge>
+                <StyledHeader>{Texts.jumbo.heading}</StyledHeader>
                 <TextAnimationWrapper />
-                <StyledHeader1>{Texts.jumbo.heading}</StyledHeader1>
                 <StyledButtonLink href="#zengrid" className="mt-4">Learn More</StyledButtonLink>
               </Col>
-              <Col xs={12} lg={4}>
-              {window.innerWidth < 1024  
+              {window.innerWidth < 768  
                 ? '' 
-                : <JumboImage1 className="JumboImage1"></JumboImage1>
+                : 
+                <Col xs={12} md={2} lg={6} className="h-100">
+                  <JumboImage1 className="JumboImage1"></JumboImage1>
+                  </Col>
                 }
-                
-              </Col>
           </Col>
         </StyledJumbotron>
 

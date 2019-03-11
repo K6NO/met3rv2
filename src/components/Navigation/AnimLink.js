@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Colors } from '../../modules/colors';
 import { StyledNavLink } from '../StyledComponents/StyledComponents';
@@ -37,8 +38,6 @@ const AnimStyledNavLink = styled(StyledNavLink)`
     }
 `;
 
-
-
 const AnimLink = (props) => (
     <AnimStyledNavLink className="AnimLink" href={props.path}>
       <StyledSpan text={props.text}>
@@ -46,5 +45,8 @@ const AnimLink = (props) => (
       </StyledSpan>
     </AnimStyledNavLink>
 )
-
+AnimLink.propTypes = {
+    text: PropTypes.string.isRequired,
+    path: PropTypes.string.isRequired
+}
 export default AnimLink;

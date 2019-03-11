@@ -106,7 +106,7 @@ class TextAnimationComponent extends Component {
   render() {
 
     return (
-        <h1 className="ml11">
+        <h1 style={{display: 'inline'}} className="ml11 ml-1">
             <span className="text-wrapper">
                 <span className="line line1"></span>
                 <span 

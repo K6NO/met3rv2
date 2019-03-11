@@ -1,19 +1,19 @@
 export const Texts = {
     jumbo: {
         title: 'zEnchargE',
-        heading: 'charging of Electric Vehicles',
+        heading: 'Charging Electric Vehicles has never been so ',
         animeWords: [
-            'Balanced',
-            'Controlled',
-            'Optimized',
-            'Distributed',
-            'Economic',
-            'Orchestrated',
-            'Networked'
+            'balanced',
+            'controlled',
+            'optimized',
+            'distributed',
+            'economic',
+            'orchestrated',
+            'networked'
         ]
     },
     grid: {
-        header: 'The EVolution is here. Increase grid resilience',
+        header: 'Tame the EVolution, increase grid resilience',
         p: 'Our turn-key demand-response solution centrally manages residential EV charging points according to grid conditions. ZenCharge assists DSOs, utilities and grid managers to meet the e-mobility challenge by reducing investment need and cutting operational costs.',
         features: [
             {
