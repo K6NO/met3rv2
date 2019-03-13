@@ -1,12 +1,19 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-require('dotenv').load();
 const Mailchimp = require('mailchimp-api-v3'); 
 const app = express();
-const list_id = '4da4e46a7d';
+// get ENV variables from .env file in dev
+if(process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+}
+const api_key = process.env.MAILCHIMP_API_KEY;
+const list_id = process.env.MAILCHIMP_LIST_ID;
 
+// Mount the react app
 app.use(express.static(path.join(__dirname, '..', 'build')));
+
+// Bodyparser to retrieve form data
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -21,16 +28,14 @@ app.get('/zengrid', function (req, res) {
 app.get('/zenfleet', function (req, res) {
     res.sendFile(path.join(__dirname, '../build/index.html'));
 });
+
+// MailChimp subscribe path
 app.post('/subscribe', function (req, res) {
-    
     const mailchimp = new Mailchimp(api_key);
-    console.log('submit', mailchimp);
-    console.log('email', req.body.email);
     mailchimp.post(`lists/${list_id}/members`, {
         email_address: req.body.email,
         status: 'subscribed'
     }).then((result) => {
-        console.log(result, 'Thank you for subscribing');
         res.redirect('/');
     }).catch((error) => {
         return res.send(error);

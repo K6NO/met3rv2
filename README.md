@@ -1,3 +1,8 @@
+MET3R Landing v2
+
+### `npm start:server`
+Runs the nodeJs server on port 3001, mounts the static site
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
