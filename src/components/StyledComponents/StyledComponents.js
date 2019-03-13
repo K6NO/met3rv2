@@ -76,13 +76,14 @@ export const StyledLink2 = styled.a`
 
 export const StyledButtonLink = styled.a`
     display: block;
-    min-width: 60px;
+    text-align: center;
+    min-width: 50px;
     max-width: 200px;
     font-size: 12px;
     font-size: 1.2rem;
     border: 1px solid white;
     border-radius: 5px;
-    padding: .8rem 2.5rem;
+    padding: .7rem 1.5rem;
     font-family: 'MontHeavyDemo', 'Impact', 'Arial', sans-serif;
     background: transparent;
     text-decoration: none;
@@ -182,11 +183,15 @@ export const StyledInput = styled.input`
     font-size: 1.2rem;
     font-weight: 400;
     line-height: 1.5;
-    color: ${Colors.lightText};
+    color: ${Colors.midText};
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
+    &:focus {
+        outline: none;
+        background-color: #ecf9ff;
+    }
     @media ${device.lg} {
         width: 70%!important;
     }

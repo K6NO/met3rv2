@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import anime from 'animejs';
 import _ from 'lodash';
 import './TextAnimationComponent.css';
-
+import styled from 'styled-components';
+import { device } from '../../modules/devices';
 /**
  * How this animation works?
  * 1.   Set up refs on the letter container element 
@@ -17,6 +18,17 @@ import './TextAnimationComponent.css';
  * 7.   animCompleteCallback() fires again when the animation is over
  */
 // Inspiration: http://tobiasahlin.com/moving-letters/#11
+
+const StyledAnimation = styled.h1`
+    display: inline;
+    font-size: 24px; 
+    font-size: ${window.innerWidth < 340 ? '2.4em!important' : '2.8em!important'};
+    padding-bottom: 2rem;
+    @media ${device.sm} {
+        font-size: 30px;
+        font-size: 3em;
+    }
+`;
 
 class TextAnimationComponent extends Component {
     constructor(props) {
@@ -106,7 +118,7 @@ class TextAnimationComponent extends Component {
   render() {
 
     return (
-        <h1 style={{display: 'inline'}} className="ml11 ml-1">
+        <StyledAnimation className="ml11">
             <span className="text-wrapper">
                 <span className="line line1"></span>
                 <span 
@@ -115,7 +127,7 @@ class TextAnimationComponent extends Component {
                     {this.wrapLetters(this.props.word)}
                 </span>
             </span>
-        </h1>
+        </StyledAnimation>
     );
   }
 }

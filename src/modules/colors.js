@@ -7,7 +7,7 @@ export const Colors = {
     pink: '#A265E9',
     text: '#2C2C2C',
     lightText: '#DEDEDE',
-    midText: '#aaaaaa',
+    midText: '#696969',
     lightTeal: '#8effdc',
     white: '#ffffff',
     gradientText: 'linear-gradient(to right, #2F3268, #2D38C3)',

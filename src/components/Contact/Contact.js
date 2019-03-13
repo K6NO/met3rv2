@@ -31,9 +31,9 @@ class Contact extends Component {
                         <Col xs={12} md={{size: 8}} lg={6} className="py-5">
                             <StyledHeader2>{h2}</StyledHeader2>
                             <p>{email}</p>
-                            <form className="subscription-form text-center text-md-left" method="POST" action="php/subscribe.php">
+                            <form className="subscription-form text-center text-md-left" method="POST" action="/subscribe">
                                 <StyledInput type="email" name="email" id="subscribe-input" placeholder={signup} />
-                                <SubscribeButton type="submit" onClick={this.submitHandler}>Subscribe</SubscribeButton>
+                                <SubscribeButton type="submit">Subscribe</SubscribeButton>
                             </form>      
                         </Col>
                     </div>

@@ -10,11 +10,11 @@ import WhiteImage from '../../images/art1.png';
 const StyledZenCharge = styled(StyledHeader1)`
   font-family: 'GaoelM3TER';
   font-size: 24px;  
-  font-size: 2.4rem;
+  ${window.innerWidth < 340 ? '2.4em!important' : '2.8em!important'};
   padding-bottom: 2rem;
-  @media ${device.md} {
+  @media ${device.sm} {
     font-size: 30px;
-    font-size: 3rem;
+    font-size: 3em;
   }
 `;
 
@@ -34,8 +34,8 @@ const JumboImage1 = styled.div`
     }
     @media ${device.lg} {
       left: -10%;
-      top: 20%;
-      left: -35%;
+      top: 25%;
+      left: -25%;
       width: 40rem;
       height: 29.6rem;
       margin-left: 0;
@@ -49,6 +49,15 @@ const StyledJumbotron = styled(Row)`
 
 const StyledHeader = styled(StyledHeader1)`
   display: inline;
+  margin-right: 0.05rem;
+  font-size: 24px; 
+  font-size: ${window.innerWidth < 340 ? '2.4em!important' : '2.8em!important'};
+  padding-bottom: 2rem;
+  @media ${device.sm} {
+    margin-right: 0.25rem;
+    font-size: 30px;
+    font-size: 3em;
+  }
 `;
 
 class JumbotronComponent extends Component {

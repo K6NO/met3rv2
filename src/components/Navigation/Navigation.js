@@ -6,8 +6,6 @@ import { Collapse,
   Nav,
   NavItem,
   } from 'reactstrap';
-import styled from 'styled-components';
-import onClickOutside from 'react-onclickoutside';
 import { StyledIcon } from '../StyledComponents/StyledComponents';
 import NavImage from '../../images/logo-met3r-white.png';
 import AnimLink from './AnimLink';
@@ -54,4 +52,4 @@ class Navigation extends Component {
   }
   }
   
-  export default onClickOutside(Navigation);
+  export default Navigation;
