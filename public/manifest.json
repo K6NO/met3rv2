@@ -1,6 +1,6 @@
 {
-  "short_name": "MET3R.com",
-  "name": "MET3R.com homepage",
+  "short_name": "MET3R",
+  "name": "MET3R ZenCharge",
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,6 +10,6 @@
   ],
   "start_url": "http://met3r.com",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#2d38c3",
   "background_color": "#ffffff"
 }
