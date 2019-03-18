@@ -13,7 +13,7 @@ export const Texts = {
         ]
     },
     grid: {
-        header: 'Tame the EVolution, increase grid resilience',
+        header: 'Make the grid resilient to the EVolution',
         p: 'Our turn-key demand-response solution centrally manages residential EV charging points according to grid conditions. ZenCharge assists DSOs, utilities and grid managers to meet the e-mobility challenge by reducing investment need and cutting operational costs.',
         features: [
             {
@@ -23,33 +23,33 @@ export const Texts = {
             },
             {
                 title: 'Home charging with control',
-                p: 'ZenCharge is a low-cost, easy-to-install solution to centrally manage residential charging points. EV owners retain the comfort of home charging while network operators get advanced control over the timing and other parameters of the charging sessions.',
-                alt: 'ZenCharge orchestrates the charging sessions so that each endpoint receives the energy needed at the right time. ZenCharge endpoints come in the form of smartplug, in-wall socket or breaker outfit and operate with a wide array of chargers.'
+                p: 'ZenCharge orchestrates the charging sessions so that each endpoint receives the energy needed at the right time. ZenCharge endpoints come in the form of smartplug, in-wall socket or breaker outfit and operate with a wide array of chargers.',
+                alt: 'EV owners benefit from reliable and comfortable home charging while network operators get advanced control over the timing and other parameters of the charging sessions.'
             },
             {
                 title: 'Plug-and-play',
                 p: 'ZenCharge fits into your current electric vehicle charging solution. Add data on residential charging points to your management software or use ZenCharge to oversee the entire network.',
-                alt: 'ZenCharge is prepared to comply with the Open Charging Protocol 1.6 and ISO15118 (V2G communication interface).'
+                alt: 'ZenCharge is prepared to comply with the Open Charging Protocol and ISO15118 (V2G communication interface).'
             },
             {
-                title: 'Ready to serve your customers',
-                p: 'EV owners set charging preferences, schedules and receive notifications in the ZenCharge mobile app. Use notifications to implement an efficient and transparent price-based demand side management strategy.',
-                alt: 'Our app is a white label product and provides a sleek communication channel to your customers informing them on time-of-use tariffs or dynamic pricing conditions.',
+                title: 'Comes with customer interface',
+                p: "The ZenCharge mobile application is where drivers set up preferences, schedules and receive information and notifications.",
+                alt: 'Our app is a white label product and provides a daily-used communication channel to your customers. It can function as a platform distributing information about time-of-use tariffs or dynamic pricing conditions.',
             },
             {
                 title: 'High precision measurements',
-                p: 'ZenCharge records all transactional information and measures electricity use with unparalleled accuracy (99.9%), on the network side. The resulting data is suitable for tariff calculations, automated accounting or billing purposes.',
-                alt: ''
+                p: 'ZenCharge records all transactional information and makes it accessible near real-time. The resulting data is suitable for tariff calculations, automated accounting or billing purposes.',
+                alt: 'We measure electricity use with the highest precision and record parameters of the charging session according to OCPP standards.'
             },
             {
                 title: 'Secure and reliable communications',
-                p: 'ZenCharge can use multiple communication protocols and unites the ubiquity of narrow-band technologies with the reliability of PLC. The resulting communication network is robust and future-proof.',
-                alt: ''
+                p: 'ZenCharge is prepared to use multiple communication protocols to transmit information from the charging point to the server. The resulting communication network is robust and future-proof.',
+                alt: 'ZenCharge has a media agnostic communication interface that can unite the ubiquity of narrow-band technologies with the reliability of PLC.'
             },
             {
-                title: 'Understand charging behaviour',
-                p: 'With high precision data on domestic charging sessions you get insight into your customers’ charging behaviour. Use this data to create better demand forecasts, design new products or improve customer satisfaction.',
-                alt: ''
+                title: 'Understand residential charging behaviour',
+                p: 'With high precision data on residential charging sessions ZenCharge helps you to this data to create better demand forecasts, design new products or improve customer satisfaction.',
+                alt: 'Current EVSP Residential charging behaviour has remained '
             },
             {
                 title: 'Motivate positive change',
@@ -60,42 +60,43 @@ export const Texts = {
     },
     fleet: {
         header: 'Outsource the charging infrastructure',
-        p : 'With ZenCharge EV fleets can be home-charged conveniently with automatic clearing and settlement of the consumed energy.',
+        p : 'ZenCharge drastically reduces the need to deploy costly charging infrastructure. Fleets using ZenCharge can be home-charged with automatic clearing and settlement mechanisms.',
         features: [
             {
                 title: 'Distributed charging infrastructure',
-                p: 'Our low-cost hardware pairs with the charging cable of the driver and offers the comfort of home charging to EV fleet users.',
-                alt: 'ZenCharge is an EV charging management solution with endpoints at residential or commercial buildings. ZenCharge lets you control and measure each charging point in real-time.'
+                p: 'ZenCharge is an EV charging management solution with endpoints in residential or commercial charging stations. ZenCharge lets fleet operators control and measure each charging point in real-time.',
+                alt: 'EV charging stations and cables equiped with the ZenCharge chip also offer a cutting-edge charging experience to drivers.',
+                
             },
             {
                 title: 'Log and control all charging sessions',
-                p: 'Over 80% of charging sessions are residential leaving them out of the rich of current EVSP networks. ZenCharge for fleet operators offers control and oversight over residential charging sessions unavailable from any other EVSP networks.',
-                alt: ''
+                p: 'Today 9 out of 10 charging sessions remain unaccounted as they occur in locations out of current EVSP network scopes. With ZenCharge you can tap into that data.',
+                alt: 'ZenCharge offers control and oversight over residential charging sessions.'
             },
             {
                 title: 'Increase fleet efficiency',
-                p: 'Get real-time information on the vehicle’s location, utilisation and the parameters of the charging session. Reduce downtime, improve fleet use, minimize operating costs and maximize EV utilization.',
-                alt: ''
+                p: 'Get real-time information on the vehicle’s location, utilisation and the parameters of the charging session.',
+                alt: 'Reduce downtime, improve fleet use, minimize operating costs and maximize EV utilization.'
             },
             {
-                title: 'Ready to serve your customers',
-                p: 'EV owners set charging preferences, schedules and receive notifications in the ZenCharge mobile app. Use notifications to implement an efficient and transparent price-based demand side management strategy.',
-                alt: 'Our app is a white label product and provides a sleek communication channel to your customers informing them on time-of-use tariffs or dynamic pricing conditions.',
+                title: 'Comes with customer interface',
+                p: "The ZenCharge mobile application is where drivers set up preferences, schedules and receive information and notifications.",
+                alt: 'Our app is a white label product and provides a regularly-used communication channel to your customers. It can function as a platform distributing information about time-of-use tariffs or dynamic pricing conditions.',
             },
             {
                 title: 'High precision measurements',
-                p: 'ZenCharge records all transactional information and measures electricity use with unparalleled accuracy (99.9%), on the network side. The resulting data is suitable for tariff calculations, automated accounting or billing purposes.',
-                alt: ''
+                p: 'ZenCharge records all transactional information and makes it accessible near real-time. The resulting data is suitable for tariff calculations, automated accounting or billing purposes.',
+                alt: 'We measure electricity use with the highest precision and record parameters of the charging session according to OCPP standards.'
             },
             {
                 title: 'Secure and reliable communications',
-                p: 'ZenCharge can use multiple communication protocols and unites the ubiquity of narrow-band technologies with the reliability of PLC. The resulting communication network is robust and future-proof.',
-                alt: ''
+                p: 'ZenCharge is prepared to use multiple communication protocols to transmit information from the charging point to the server. The resulting communication network is robust and future-proof.',
+                alt: 'ZenCharge has a media agnostic communication interface that can unite the ubiquity of narrow-band technologies with the reliability of PLC.'
             },
             {
-                title: 'Understand charging behaviour',
-                p: 'With high precision data on domestic charging sessions you get insight into your customers’ charging behaviour. Use this data to create better demand forecasts, design new products or improve customer satisfaction.',
-                alt: ''
+                title: 'Understand residential charging behaviour',
+                p: 'With high precision data on residential charging sessions ZenCharge helps you to this data to create better demand forecasts, design new products or improve customer satisfaction.',
+                alt: 'Current EVSP Residential charging behaviour has remained '
             },
             {
                 title: 'Motivate positive change',
@@ -103,5 +104,11 @@ export const Texts = {
                 alt: ''
             }
         ]
+    },
+    contact : {
+        header: 'Get in touch to know more or request a demo',
+        email: 'info@met3r.com',
+        signupText: 'Sign up to our newsletter',
+        linkedin: 'https://www.linkedin.com/company/27102755'
     }
 }

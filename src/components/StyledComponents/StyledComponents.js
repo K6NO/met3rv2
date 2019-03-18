@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import { Colors } from '../../modules/colors';
 import { device } from '../../modules/devices';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -126,9 +126,7 @@ export const StyledNavLink = styled.a`
     }
 `;
 
-export const StyledIcon = styled(FontAwesomeIcon)`
-  color: ${Colors.white};
-`;
+
 
 export const StyledButton1 = styled.button`
     font-family: 'MontHeavyDemo', 'Impact', 'Arial', sans-serif;
@@ -195,4 +193,26 @@ export const StyledInput = styled.input`
     @media ${device.lg} {
         width: 70%!important;
     }
+`;
+
+export const growIcon = keyframes`
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+`;
+export const StyledContactIcon = styled.a`
+    color: ${Colors.darkblue};
+    font-size: 2.4em;
+    margin-right: .5rem;
+    &:hover {
+        color: ${Colors.midblue};
+        animation: ${growIcon} 200ms cubic-bezier(0.550, 0.085, 0.680, 0.530);
+        animation-fill-mode: forwards;
+    }
+`;
+export const StyledIcon = styled(FontAwesomeIcon)`
+  
 `;

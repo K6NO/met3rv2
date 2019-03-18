@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faCheckSquare, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faCheckSquare, faBars, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import Navigation from './components/Navigation/Navigation';
 import LandingPage from './pages/LandingPage/LandingPage';
 import FeaturePage from './pages/FeaturePage/FeaturePage';
@@ -17,7 +17,7 @@ import './App.css';
  * so that it is available as 'FontAwesomeIcon' import in all components
  * https://github.com/FortAwesome/react-fontawesome#basic
  */
-library.add(fab, faCheckSquare, faBars);
+library.add(fab, faCheckSquare, faBars, faPaperPlane);
 
 class App extends Component {
   
@@ -33,7 +33,6 @@ class App extends Component {
             <Route name="landing" path="/" exact component={LandingPage} {...props} />
             <Route name="landing" path="/zenfleet" exact component={FeaturePage} {...props} />
             <Route name="landing" path="/zengrid" exact component={FeaturePage} {...props} />
-                        {/* <LandingPage props={props} /> */}
           </Switch>
           <StyledFluidContainer id="contact">
             <Contact />
