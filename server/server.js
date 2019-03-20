@@ -41,6 +41,6 @@ app.post('/subscribe', function (req, res) {
         return res.send(error);
     });
 });
-const listener = app.listen(3001, () => {
+const listener = app.listen(3100, () => {
     console.log('App is running on port', listener.address().port);
 });
