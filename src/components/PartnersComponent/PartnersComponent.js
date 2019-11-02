@@ -3,7 +3,7 @@ import { Row, Col } from 'reactstrap';
 import styled from 'styled-components';
 import { Colors } from '../../modules/colors';
 import { device } from '../../modules/devices';
-import CKICLogo from '../../images/logo-climate-kic.svg';
+import CKICLogo from '../../images/logo-climate-kic.png';
 import HiventuresLogo from '../../images/logo-hiventures.jpg';
 import MentonLogo from '../../images/logo-menton.png';
 import PpisLogo from '../../images/logo-ppis.png';
