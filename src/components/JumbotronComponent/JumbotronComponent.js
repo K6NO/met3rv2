@@ -21,7 +21,7 @@ const StyledZenCharge = styled(StyledHeader1)`
 const JumboImage1 = styled.div`
     position: absolute;
     background-image: ${`url('${WhiteImage}')`};
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     margin-left: auto;
@@ -34,10 +34,9 @@ const JumboImage1 = styled.div`
     }
     @media ${device.lg} {
       left: -10%;
-      top: 25%;
-      left: -25%;
-      width: 40rem;
-      height: 29.6rem;
+      top: 10%;
+      left: -20%;
+      width: 100%;
       margin-left: 0;
     }
 `;

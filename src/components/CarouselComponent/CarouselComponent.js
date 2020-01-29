@@ -8,6 +8,12 @@ import styled from 'styled-components';
 const StyledDiv = styled.div`
   height: 100px;
   text-align: center;
+  .subtitle {
+    font-size: .8rem;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    
+  }
 `;
 const StyledLogo = styled.img`
   max-width: 150px;
@@ -60,8 +66,10 @@ class CarouselComponent extends Component {
             onExiting={this.onExiting}
             onExited={this.onExited}
             key={item.altText}
+            className="text-center"
           >
             <StyledLogo src={item.src} alt={item.altText} />
+            <p className="subtitle">{item.altText}</p>
           </CarouselItem>
         );
     });

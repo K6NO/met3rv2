@@ -9,6 +9,9 @@ import MentonLogo from '../../images/logo-menton.png';
 import PpisLogo from '../../images/logo-ppis.png';
 import BlueprintLogo from '../../images/logo-blueprint.png';
 import NkmLogo from '../../images/logo-nkm.png';
+import MvmLogo from '../../images/logo_mvm.png';
+import EUWLogo from '../../images/logo_EUW.png';
+import WSLogo from '../../images/logo_WS_alpha.png';
 import CarouselComponent from '../CarouselComponent/CarouselComponent';
 import Art2Image from '../../images/art2@2x.png';
 
@@ -49,15 +52,16 @@ const StyledHeader = styled.h4`
 const partnerText = 'Our partners';
 const supporterText = 'Our supporters';
 const partnerBox = [
-    {   altText: 'Blueprint Energy', src: `${BlueprintLogo}`},
-    {   altText: 'Menton Energy Group', src: `${MentonLogo}`},
+    {   altText: 'MVM Group', src: `${MvmLogo}`},
+    {   altText: 'NKM - National Utilities', src: `${NkmLogo}`},
     {   altText: 'Pannon Pro Innovations', src: `${PpisLogo}`},
 
 ];
 const supporterBox = [
-    {   altText: 'Climate KIC', src: `${CKICLogo}`},
+    {   altText: 'Climate-KIC, supported by the EU', src: `${CKICLogo}`},
     {   altText: 'Hiventures Venture Capital Fund', src: `${HiventuresLogo}`},
-    {   altText: 'Nemzeti Kozmuvek - National Utilities', src: `${NkmLogo}`},
+    {   altText: 'European Utility Week, Initiate - 2019', src: `${EUWLogo}`},
+    {   altText: 'Web Summit Alpha Exhibitor', src: `${WSLogo}`},
 ];
 class PartnersComponent extends Component {
   

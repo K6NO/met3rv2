@@ -9,11 +9,12 @@ import BlueLineSVG from '../../images/blue-line.svg';
 import Art5Image from '../../images/art5@2x.png';
 
 const StyledMainRow = styled(Row)`
-  min-height: ${window.innerWidth < 1024 ? '500px' : '600px'};
+  /* min-height: ${window.innerWidth < 1024 ? '500px' : '600px'}; */
+  margin: 5rem auto;
 `;
 const StyledImage1 = styled.div`
-    width: ${window.innerWidth < 1024 ? '20rem' : '30rem'};
-    height: ${window.innerWidth < 1024 ? '20rem' : '30rem'};
+    width: ${window.innerWidth < 1024 ? '20rem' : '25rem'};
+    height: ${window.innerWidth < 1024 ? '20rem' : '25rem'};
     max-width: 100%;
     background-image: ${`url('${Art5Image}')`};
     background-size: cover;

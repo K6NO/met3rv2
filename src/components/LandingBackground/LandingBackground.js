@@ -26,16 +26,17 @@ Inspiration: https://webdesign.tutsplus.com/tutorials/create-an-isometric-layout
 
 const StyledContainer = styled.div`
     position: absolute;
-    width: 100%;
+    /* width: 103%; */
     height: 120%;
     top: 0;
     left: 0;
     overflow: hidden;
     z-index: -1;
+    width: ${window.innerWidth > 480 ? '100%' : '103%'}
 `;
 
 const StyledIsoBackground = styled.div`
-     
+    border-radius: .5rem;
     width: ${window.innerWidth > window.innerHeight 
     ? "200%" : "240%"};
     height: ${window.innerWidth > window.innerHeight 

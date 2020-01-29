@@ -4,7 +4,8 @@ import PartnersComponent from '../../components/PartnersComponent/PartnersCompon
 import ZenGridComponent from '../../components/ZenGridComponent/ZenGridComponent';
 import ZenFleetComponent from '../../components/ZenFleetComponent/ZenFleetComponent';
 import LandingBackground from '../../components/LandingBackground/LandingBackground';
-import { StyledContainer } from '../../components/StyledComponents/StyledComponents';
+import { StyledContainer, StyledFluidContainer } from '../../components/StyledComponents/StyledComponents';
+import NewPartnersComponent from '../../components/NewPartnersComponent/NewPartnersComponent';
 
 class LandingPage extends React.Component {
     constructor(props) {
@@ -16,20 +17,19 @@ class LandingPage extends React.Component {
         return (
             <div id="landingPage">
         <LandingBackground />
-            <StyledContainer >
-                <JumbotronComponent {...props} />
-                {window.innerWidth > 480 
-                ? <PartnersComponent {...props} /> 
-                : ''}
-            </StyledContainer>
+        <StyledContainer >
+            <JumbotronComponent {...props} />
+            {/* {window.innerWidth > 480 
+            ? <PartnersComponent {...props} /> 
+            : ''} */}
+        </StyledContainer>
         <StyledContainer>
             <ZenGridComponent  {...props} />
             <ZenFleetComponent {...props} />
         </StyledContainer>
+
         <StyledContainer>
-            {window.innerWidth < 480 
-                ? <PartnersComponent {...props} /> 
-                : ''}
+            <NewPartnersComponent />
         </StyledContainer>    
     </div>
         )

@@ -20,7 +20,7 @@ class Contact extends Component {
                 <Col>
                     <div className="container py-5">
                         <Col xs={12} md={{size: 8}} lg={6} className="py-5">
-                            <StyledHeader2>{Texts.contact.header}</StyledHeader2>
+                            <StyledHeader2 className="mt-4">{Texts.contact.header}</StyledHeader2>
                             <p>{Texts.contact.email}</p>
                                 <StyledContactIcon href={`mailto:${Texts.contact.email}`}>
                                     <FontAwesomeIcon icon={['fas', 'paper-plane']} size="lg" className="ml-3 ml-sm-5"/>

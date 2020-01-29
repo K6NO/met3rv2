@@ -23,7 +23,7 @@ export const StyledFluidContainer = styled.section`
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    background: ${Colors.lightText};
+    /* background: ${Colors.lightText}; */
 `;
 
 export const StyledHeader1 = styled.h1`
@@ -41,7 +41,7 @@ export const StyledHeader2 = styled.h2`
     -webkit-background-clip: text;
     background-clip: text;
     font-size: 24px;
-    font-size: 2.4rem;
+    font-size: 2rem;
 `;
 
 export const StyledLink1 = styled.a`
